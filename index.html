@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything is Woke</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #b51e23;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .woke-statement {
+            font-size: 2rem;
+            margin: 40px 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+        }
+        button {
+            background-color: #b51e23;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #8a171a;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Everything is Woke!</h1>
+        <div class="woke-statement" id="woke-statement">Loading wokeness...</div>
+        <button id="new-woke">Show Me More Wokeness!</button>
+        <div class="footer">A satirical page about finding "wokeness" everywhere</div>
+    </div>
+
+    <script>
+        const wokeStatements = [
+            "Breakfast is woke",
+            "Jogging is woke",
+            "Drinking water is woke",
+            "Using umbrellas is woke",
+            "Breathing oxygen is woke",
+            "Wearing socks is woke",
+            "Blinking is woke",
+            "Grocery shopping is woke",
+            "Having a bedtime is woke",
+            "Owning a couch is woke",
+            "Brushing your teeth is woke",
+            "Tying your shoes is woke",
+            "Walking your dog is woke",
+            "Using calculators is woke",
+            "Reading books is woke",
+            "Sleeping at night is woke",
+            "Taking showers is woke",
+            "Parallel parking is woke",
+            "Posting on social media is woke",
+            "Eating vegetables is woke",
+            "Wearing glasses is woke",
+            "Having a birthday is woke",
+            "Doing laundry is woke",
+            "Drinking coffee is woke",
+            "Using crosswalks is woke",
+            "Setting alarms is woke",
+            "Owning furniture is woke",
+            "Paying taxes is woke",
+            "Making toast is woke",
+            "Getting haircuts is woke",
+            "Riding bicycles is woke",
+            "Listening to music is woke",
+            "Wearing hats is woke",
+            "Using telephones is woke",
+            "Walking upstairs is woke",
+            "Gardening is woke",
+            "Charging your phone is woke",
+            "Writing emails is woke",
+            "Recycling is extremely woke",
+            "Vacation time is woke",
+            "Wearing sunscreen is woke",
+            "Having a job is woke",
+            "Driving cars is woke",
+            "Owning pets is woke",
+            "Having windows is woke",
+            "Wearing shoes is woke",
+            "Having a refrigerator is woke",
+            "Using electricity is woke",
+            "Having doors is woke",
+            "Breathing air is woke",
+            "Saying 'hello' is woke",
+            "Eating lunch is woke",
+            "Owning a clock is woke",
+            "Using a calendar is woke",
+            "Having opinions is woke",
+            "Buying groceries is woke",
+            "Watching TV is woke",
+            "Using light bulbs is woke",
+            "Having running water is woke",
+            "Drinking milk is woke"
+        ];
+
+        const wokeStatement = document.getElementById("woke-statement");
+        const newWokeButton = document.getElementById("new-woke");
+
+        function getRandomStatement() {
+            const randomIndex = Math.floor(Math.random() * wokeStatements.length);
+            return wokeStatements[randomIndex];
+        }
+
+        function updateWokeStatement() {
+            wokeStatement.textContent = getRandomStatement();
+        }
+
+        // Initial statement when page loads
+        updateWokeStatement();
+
+        // Update statement when button is clicked
+        newWokeButton.addEventListener("click", updateWokeStatement);
+    </script>
+</body>
+</html>
